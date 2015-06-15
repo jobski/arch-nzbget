@@ -11,13 +11,13 @@ ADD *.conf /etc/supervisor/conf.d/
 ADD install.sh /root/install.sh
 
 # copy prerun bash shell script (checks for existence of nzbget config)
-ADD start.sh /home/nobody/start.sh
+ADD start.sh /home/jobski/start.sh
 
 # install app
 #############
 
 # make executable and run bash scripts to install app
-RUN chmod +x /root/*.sh /home/nobody/*.sh && \
+RUN chmod +x /root/*.sh /home/jobski/*.sh && \
 	/bin/bash /root/install.sh
 	
 # docker settings
